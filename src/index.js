@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { KeyboardControls } from '@react-three/drei';
 
 import Scene from './scene';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <div id="app">
-        <Scene>
-            
-        </Scene>
+        <KeyboardControls
+            map={[
+                { name: 'up', keys: ['ArrowUp', 'w', 'W'] },
+                { name: 'down', keys: ['ArrowDown', 's', 'S'] },
+                { name: 'left', keys: ['ArrowLeft', 'a', 'A'] },
+                { name: 'right', keys: ['ArrowRight', 'd', 'D'] },
+            ]}>
+            <Scene />
+        </KeyboardControls>
     </div>
 );
