@@ -11,3 +11,14 @@ div#root, div#app, canvas {
 h1 {
     margin: 0;
 }
+
+#overlay {
+    position: absolute;
+    z-index: 1;
+}
+
+#overlay * {
+	height: 150px;
+	width: 150px;
+	padding: 10px;
+}

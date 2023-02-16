@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYRO</title>
+</head>
+
+<body>
+    <span id="x">0</span>
+    <span id="y">0</span>
+    <span id="z">0</span>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const fix = num => num.toFixed(2);
+
+        let socket = io();
+        let acl = new Accelerometer({ frequency: 60 });
+
+        acl.addEventListener('reading', () => {
+            console.log("Acceleration along the X-axis " + acl.x);
+            console.log("Acceleration along the Y-axis " + acl.y);
+            console.log("Acceleration along the Z-axis " + acl.z);
+            document.querySelector('#x').innerHTML = fix(acl.x);
+            document.querySelector('#y').innerHTML = fix(acl.y);
+            document.querySelector('#z').innerHTML = fix(acl.z);
+
+            socket.emit('coords', {x: acl.x, y: acl.y, z: acl.z});
+        });
+
+        acl.start();
+    </script>
+</body>
+
+</html>

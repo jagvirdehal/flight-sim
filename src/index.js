@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { KeyboardControls } from '@react-three/drei';
 
-import Scene from './scene';
+import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,8 +14,9 @@ root.render(
                 { name: 'down', keys: ['ArrowDown', 's', 'S'] },
                 { name: 'left', keys: ['ArrowLeft', 'a', 'A'] },
                 { name: 'right', keys: ['ArrowRight', 'd', 'D'] },
+                { name: 'turbo', keys: ['Shift'] }
             ]}>
-            <Scene />
+            <App />
         </KeyboardControls>
     </div>
 );
