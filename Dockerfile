@@ -11,7 +11,7 @@ RUN npm install
 COPY socket/ .
 
 # Copy front-end build
-COPY build/ .
+COPY build/ build/
 
 # Run socket server
 EXPOSE 3030

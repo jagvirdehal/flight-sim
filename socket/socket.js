@@ -27,6 +27,7 @@ setInterval(() => {
 
 app.use(cors());
 app.engine('.html', require('ejs').__express);
+app.use(express.static(path.join(__dirname, 'build')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
@@ -55,7 +56,7 @@ app.get('/api/url', (req, res) => {
 
 app.get('/', (req, res) => {
 	// res.redirect('/app/demo');
-	res.sendFile(__dirname + '/index.html');
+	res.sendFile(__dirname + '/build/index.html');
     // res.send("Error 404");
 })
 
