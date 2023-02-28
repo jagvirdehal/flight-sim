@@ -12,13 +12,13 @@ The goal of this project was to demo an immersive flight simulator that is acces
 
 ## Run through Docker hub
 
-You can pull the container from docker hub (not always up to date) [here](https://hub.docker.com/r/jdehal/flight-sim) with the command `docker pull jdehal/flight-sim`.
+You can pull the container from docker hub (not always up to date) [here](https://hub.docker.com/r/jdehal/flight-sim).
 
-You can then run the container with:
+### Run container at localhost:3030
 
 `docker run -dp 3030:3030 --rm --name flight-sim jdehal/flight-sim`
 
-And stop it with
+### Stop container
 
 `docker stop flight-sim`
 
