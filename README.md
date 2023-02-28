@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Demo Image](demo.png)
+
 This is an accessible flight simulation experience that uses a smartphone accelerometer to control the plane. This allows users who don't have an expensive controller/joystick to have a taste for what its like to fly a plane.
 
 This was a JavaScript project made this using **React, Three.js, Node.js, and <span>Socket.io</span>**, among other smaller libraries.
