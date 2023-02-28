@@ -10,7 +10,19 @@ This was a JavaScript project made this using **React, Three.js, Node.js, and <s
 
 The goal of this project was to demo an immersive flight simulator that is accessible for nearly anyone to try without any fancy controllers. Personally, I enjoy the idea of creating a fun experience that anyone can enjoy, and this demo shows that a flight simulation experience can be created in such a way that is accessible to anyone with a cellphone and a computer.
 
-## Install
+## Run through Docker hub
+
+You can pull the container from docker hub (not always up to date) [here](https://hub.docker.com/r/jdehal/flight-sim) with the command `docker pull jdehal/flight-sim`.
+
+You can then run the container with:
+
+`docker run -dp 3030:3030 --rm --name flight-sim jdehal/flight-sim`
+
+And stop it with
+
+`docker stop flight-sim`
+
+## Build
 
 ### Docker (recommended):
 
